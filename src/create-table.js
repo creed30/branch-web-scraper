@@ -1,7 +1,8 @@
 var AWS = require("aws-sdk");
 
+// used to create the dynamo table to test locally
 AWS.config.update({
-  region: "us-west-2",
+  region: "us-east-1",
   endpoint: "http://localhost:4566"
 });
 

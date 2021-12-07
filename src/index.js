@@ -4,45 +4,44 @@ const AWS = require('aws-sdk');
 
 AWS.config.update({
     region: "us-east-1",
-    endpoint: "http://localhost:4566"
+    // this is used for local testing on localstack
+    // endpoint: "http://localhost:4566"
+    "accessKeyId": "access key here, don't upload the key!",
+    "secretAccessKey": "secret key here, don't upload the key!"
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
 
-const BASE_URL = "https://easycfangularapi.azurewebsites.net/filer/documentsearch/";
-const ATLANTA_UUID = "6FEAF788-905D-4455-B36D-BF3F5E96F189";
-const CAMPAIGN_CONTRIBUTION_DISCLOSURE = "campaign contribution disclosure report";
-const TABLE = "test2";
-const DATE_PARAM = "2021-05-12"
-
-const DOCUMENT_URL = "https://easycfangularapi.azurewebsites.net/documents/%s/viewfinalredactedpdf";
+const CAMPAIGN_CONTRIBUTION_DISCLOSURE = "campaign contributions disclosure report";
+const CAMPAIGN_CONTRIBUTIONS_DISCLOSURE = "campaign contribution disclosure report";
+const TABLE = "campaign_finance_pdfs";
+const DATE_PARAM = "2019-01-01"
 
 // call Atlanta URL and return json of all candidate metadata
-// var options = {
-//   'method': 'GET',
-//   'url': BASE_URL + ATLANTA_UUID,
-//   'headers': {
-//   }
-// };
 
-// request(options, function (error, response) {
-//   if (error) throw new Error(error);
-//   console.log(response.body);
+function runMain(city, cityUrl) {
 
-//  fs.writeFile('file.json', response.body, (error) => {
-//     if (error) throw error;
-//   });
-// });
-function runMain() {
+    var options = {
+        'method': 'GET',
+        'url': cityUrl,
+        'headers': {
+        }
+    };
 
-    fs.readFile('./test/atlanta-candidate-meta-all.json', 'utf8', (err, data) => {
+    request(options, function (err, response) {
+        if (err) throw new Error(err);
+        // console.log(response.body);
+
+
+        // used to test by reading the sample of the body response
+        // fs.readFile('./test/atlanta-candidate-meta-all.json', 'utf8', (err, data) => {
 
         if (err) {
             console.log(`Error reading file from disk: ${err}`);
         } else {
 
             // parse JSON string to JSON object
-            const atlantaMetadata = JSON.parse(data);
+            const atlantaMetadata = JSON.parse(response.body);
 
             //Top level going through all candidates
             atlantaMetadata.forEach(candidate => {
@@ -58,7 +57,8 @@ function runMain() {
 
                         //set to check includes because there are different variations such as 
                         // a space at the end and words before and after
-                        if (documentTypeLower.includes(CAMPAIGN_CONTRIBUTION_DISCLOSURE)) {
+                        if (documentTypeLower.includes(CAMPAIGN_CONTRIBUTION_DISCLOSURE) ||
+                            documentTypeLower.includes(CAMPAIGN_CONTRIBUTIONS_DISCLOSURE)) {
 
                             // compare the input date with the date submitted
                             const dateSubmitted = new Date(formatDate(document.datesubmitted));
@@ -74,19 +74,21 @@ function runMain() {
                                         documentMetadata[prop] = candidate[prop];
                                     }
                                 }
-
+                                console.log(city + dateSubmitted);
 
                                 documentMetadata.documentUrl = `https://easycfangularapi.azurewebsites.net/documents/${documentMetadata.documentid}/viewfinalredactedpdf`
-                                console.log(JSON.stringify(documentMetadata));
-                                storeDocumentMetadata(documentMetadata, "atlanta");
-                            } 
+                                // console.log(JSON.stringify(documentMetadata));
+                                storeDocumentMetadata(documentMetadata, city);
+                            }
                         }
                     }
                 });
             });
         }
 
+
     });
+
 }
 
 function storeDocumentMetadata(documentMetadata, city) {
@@ -120,4 +122,21 @@ function formatDate(input) {
     return `20${input.substring(6, 8)}-${input.substring(0, 2)}-${input.substring(3, 5)}`;
 }
 
-runMain();
+
+function readUrlsAndWriteAllEasyVote() {
+    fs.readFile('./src/urls.json', 'utf8', (err, data) => {
+        if (err) throw err;
+        const cities = JSON.parse(data);
+        for (var city in cities) {
+            if (cities[city].active) {
+                console.log(city);
+                runMain(city, cities[city].dataUrl);
+            }
+        }
+
+    });
+
+
+}
+
+readUrlsAndWriteAllEasyVote();

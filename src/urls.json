@@ -1,146 +1,141 @@
 {
     "alpharetta": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
-    "atlanta": {
-        "active": "true",
-        "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/6FEAF788-905D-4455-B36D-BF3F5E96F189",
-        "home-url": "https://atlantacity.easyvotecampaignfinance.com/home/publicfilings"
-    },
+   
     "brookhaven": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "chamblee": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "clarkston": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "cumming": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "decatur": {
-        "active": "true",
+        "active": true,
         "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/F1CEE4C1-D62B-4F4D-BA15-D469965E72DE",
-        "home-url": "https://cityofdecaturga.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/F1CEE4C1-D62B-4F4D-BA15-D469965E72DE",
+        "homeUrl": "https://cityofdecaturga.easyvotecampaignfinance.com/home/publicfilings"
     },
     "doraville": {
-        "active": "false",
+        "active": false,
         "type": "unknown",
-        "data-url": "",
-        "home-url": "https://www.doravillega.us/search.php?q=campaign+finance"
+        "dataUrl": "",
+        "homeUrl": "https://www.doravillega.us/search.php?q=campaign+finance"
     },
     "duluth": {
-        "active": "false",
+        "active": false,
         "type": "unknown",
-        "data-url": "",
-        "home-url": "https://www.duluthga.net/about_duluth/important_information.php"
+        "dataUrl": "",
+        "homeUrl": "https://www.duluthga.net/about_duluth/important_information.php"
     },
     "dunwoody": {
-        "active": "true",
+        "active": true,
         "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/06191C4C-4783-431C-BD12-A83511E5206B",
-        "home-url": "https://cityofdunwoodyga.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/06191C4C-4783-431C-BD12-A83511E5206B",
+        "homeUrl": "https://cityofdunwoodyga.easyvotecampaignfinance.com/home/publicfilings"
     },
     "east point": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "johns creek": {
-        "active": "true",
+        "active": true,
         "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/7AB0BC1F-A979-4726-8D84-A0628AD7B2BC",
-        "home-url": "https://cityofjohnscreekga.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/7AB0BC1F-A979-4726-8D84-A0628AD7B2BC",
+        "homeUrl": "https://cityofjohnscreekga.easyvotecampaignfinance.com/home/publicfilings"
     },
     "kennesaw": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "lawrenceville": {
-        "active": "true",
+        "active": true,
         "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/8A49FE22-9FC0-4EEF-97F8-1409B9A93A4C",
-        "home-url": "https://lawrencevillecity.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/8A49FE22-9FC0-4EEF-97F8-1409B9A93A4C",
+        "homeUrl": "https://lawrencevillecity.easyvotecampaignfinance.com/home/publicfilings"
     },
     "lilburn": {
-        "active": "false",
+        "active": false,
         "type": "unknown",
-        "data-url": "",
-        "home-url": "https://gwinnettcountyga.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "",
+        "homeUrl": "https://gwinnettcountyga.easyvotecampaignfinance.com/home/publicfilings"
     },
     "marietta": {
-        "active": "false",
+        "active": false,
         "type": "unknown",
-        "data-url": "",
-        "home-url": "https://www.cobbcounty.org/elections/candidates/campaign-disclosures"
+        "dataUrl": "",
+        "homeUrl": "https://www.cobbcounty.org/elections/candidates/campaign-disclosures"
     },
     "norcross": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "roswell": {
-        "active": "true",
+        "active": true,
         "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/7BE4143A-A48A-4F77-8F70-3144DF414291",
-        "home-url": "https://cityofroswellga.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/7BE4143A-A48A-4F77-8F70-3144DF414291",
+        "homeUrl": "https://cityofroswellga.easyvotecampaignfinance.com/home/publicfilings"
     },
     "sandy springs": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "savannah": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "smyrna": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "south fulton": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     },
     "tucker": {
-        "active": "true",
+        "active": true,
         "type": "easyvote",
-        "data-url": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/B43C53D1-5FC7-4C48-96EC-61066E1CD34B",
-        "home-url": "https://cityoftuckerga.easyvotecampaignfinance.com/home/publicfilings"
+        "dataUrl": "https://easycfangularapi.azurewebsites.net/filer/documentsearch/B43C53D1-5FC7-4C48-96EC-61066E1CD34B",
+        "homeUrl": "https://cityoftuckerga.easyvotecampaignfinance.com/home/publicfilings"
     },
     "union city": {
-        "active": "false",
+        "active": false,
         "type": "",
-        "data-url": "",
-        "home-url": ""
+        "dataUrl": "",
+        "homeUrl": ""
     }
 }
